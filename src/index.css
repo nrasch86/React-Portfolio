@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white; /* Sets default text color to white for all text not explicitly targeted */
+  color: white; 
   background-image: url('./assets/images/background.jpg');
   background-size: cover;
   background-position: center center;
@@ -17,10 +17,10 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  color: white; /* Ensures code font is also white */
+  color: white;
 }
 
-/* Ensuring header tags stand out by being colored red */
+/*Header color*/
 h1, h2, h3, h4, h5, h6 {
   color: red !important; /* Changes the color of headers to red */
 }
@@ -57,7 +57,7 @@ a, a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
-/* Style adjustments for form elements */
+/* Contact Form style */
 input, textarea {
   background-color: #333;
   border: 1px solid #666;

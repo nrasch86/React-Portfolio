@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
-import banner from '../assets/images/banner.jpg'; // Make sure the path is correct relative to this file
+import banner from '../assets/images/banner.jpg'; 
 
 const About = () => {
   return (
-    <Container fluid> {/* Container is now fluid */}
+    <Container fluid> 
       {/* Banner Photo */}
       <Row className="my-4">
         <Col>
