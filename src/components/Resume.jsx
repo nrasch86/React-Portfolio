@@ -3,7 +3,6 @@
 import React from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import banner from '../assets/images/banner.jpg';
-const resumePdf = '../assets/docs/Resume.pdf';
 
 const Resume = () => {
   return (
