@@ -1,3 +1,5 @@
+/* index.css */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,42 +7,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.home-background {
+  color: white; /* Sets default text color to white for all text not explicitly targeted */
   background-image: url('./assets/images/background.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
+  background-attachment: fixed;
 }
 
-/* Ensure that the content will be on top of the background */
-.home-content {
-  position: relative;
-  z-index: 2;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  color: white; /* Ensures code font is also white */
 }
 
+/* Ensuring header tags stand out by being colored red */
+h1, h2, h3, h4, h5, h6 {
+  color: red !important; /* Changes the color of headers to red */
+}
 
-.home-content-background {
+/* Backgrounds and adjustments for specific content areas */
+.home-content-background, .about-content-background, .portfolio-content-background, .resume-content-background, .contact-content-background {
   background: rgba(255, 255, 255, 0.6); 
   padding: 20px; 
   border-radius: 15px; 
 }
 
-
+/* Full width for banner images */
 .banner-image {
-  max-height: 200px; 
-  width: auto;
+  width: 100%;
+  height: auto;
   margin-bottom: 2rem;
 }
 
+/* Styling for profile images */
 .profile-image {
   max-width: 150px; 
   height: auto;
@@ -48,3 +47,27 @@ code {
   margin-bottom: 2rem;
 }
 
+/* White text for all text and links */
+body, p, a, label, button, input, textarea {
+  color: white;
+}
+
+a, a:hover, a:focus, a:active {
+  color: white;
+  text-decoration: none;
+}
+
+/* Style adjustments for form elements */
+input, textarea {
+  background-color: #333;
+  border: 1px solid #666;
+  color: white;
+}
+
+::placeholder {
+  color: #ddd;
+}
+
+.card {
+  background-color: black;
+}

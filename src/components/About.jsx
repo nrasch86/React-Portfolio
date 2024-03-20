@@ -6,11 +6,11 @@ import banner from '../assets/images/banner.jpg'; // Make sure the path is corre
 
 const About = () => {
   return (
-    <Container>
+    <Container fluid> {/* Container is now fluid */}
       {/* Banner Photo */}
       <Row className="my-4">
         <Col>
-          <Image src={banner} alt="Banner" fluid />
+          <Image src={banner} alt="About Banner" className="banner-image" />
         </Col>
       </Row>
 
