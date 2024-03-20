@@ -1,7 +1,7 @@
 // Contact.jsx
 
 import React, { useState } from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image, Form, Button } from 'react-bootstrap';
 import banner from '../assets/images/banner.jpg';
 
 const Contact = () => {
@@ -22,7 +22,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    alert('Thank you for your message. We will get back to you soon.');
+    alert('Thanks for reaching out! I look forward to connecting!');
     setFormData({
       name: '',
       email: '',
@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <>
-      <Container fluid> 
+      <Container fluid>
         <Row className="my-4">
           <Col>
             <Image src={banner} alt="Contact Banner" className="banner-image" />
@@ -40,48 +40,47 @@ const Contact = () => {
         </Row>
       </Container>
       
-      <Container> 
-        <Row className="my-4">
-          <Col xs={12}>
+      <Container>
+        <Row className="my-4 justify-content-center">
+          <Col xs={12} md={8} lg={6}> {/* Adjust the column sizes as needed for better spacing */}
             <h1>Contact Me</h1>
-            <form onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="name">Name:</label>
-                <input
+            <Form onSubmit={handleSubmit}>
+              <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Label>Name:</Form.Label>
+                <Form.Control 
                   type="text"
-                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  required
+                  required 
                 />
-              </div>
+              </Form.Group>
 
-              <div>
-                <label htmlFor="email">Email:</label>
-                <input
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email:</Form.Label>
+                <Form.Control 
                   type="email"
-                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required
+                  required 
                 />
-              </div>
+              </Form.Group>
 
-              <div>
-                <label htmlFor="message">Message:</label>
-                <textarea
-                  id="message"
+              <Form.Group className="mb-3" controlId="formBasicMessage">
+                <Form.Label>Message:</Form.Label>
+                <Form.Control 
+                  as="textarea"
+                  rows={4}
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required
+                  required 
                 />
-              </div>
+              </Form.Group>
 
-              <button type="submit">Send</button>
-            </form>
+              <Button variant="primary" type="submit">Send</Button>
+            </Form>
           </Col>
         </Row>
       </Container>
